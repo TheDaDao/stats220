@@ -1,4 +1,4 @@
-# *Alex Wei*'s Stats220
+# *Alex Wei*'s Statistics 220 Project
 ## What is this project about?
 
 *Alex Wei*'s stats220 project is a project which the **University of Auckland** requires me to initiate as a test of my skill throughout the **Statistics 220** course.
