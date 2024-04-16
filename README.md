@@ -1,20 +1,24 @@
-# *Alex Wei*'s Statistics 220 Project
+# *Alex Wei*'s Statistics 220 Projects
 ## What is this project about?
 
-*Alex Wei*'s stats220 project is a project which the **University of Auckland** requires me to initiate as a test of my skill throughout the **Statistics 220** course.
+*Alex Wei*'s stats220 projects are projects required by the  **University of Auckland** as a test of my skill throughout the **Statistics 220** course.
 
 ## What skills would *Alex Wei* be learning?
 
-*Alex Wei* is required to learn a couple of things including but not limited to:
+Technical skills include:
 - HTML
 - CSS
 - R project
+- SQL
+- JSON
+
+I had also developed an understanding of data visualisation.
 
 ### A little more about the poster.
 
-*Alex Wei*, me, likes a good number of things, perhaps in the following order.
+My interests are:
 
-1. Free Video Games (At the time of writing I am playing lightly modified [Shogun 2](https://store.steampowered.com/app/201270/Total_War_SHOGUN_2/)) 
-2. Documentaries (Primarily history ones on youtube [BE CAREFUL WHEN WATCHING INDEPENDENT DOCUMENTARIES, not everything on youtube is true!])
+1. Free Video Games (Such as [War Thunder](https://warthunder.com/en) and [Shogun 2](https://store.steampowered.com/app/201270/Total_War_SHOGUN_2/)) 
+2. Documentaries (Particularly history documentaries)
 3. Other youtube entertainment/edutainment videos
 4. Reading [Wikipedia](https://en.wikipedia.org/wiki/Wikipedia)
