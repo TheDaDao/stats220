@@ -1,0 +1,162 @@
+---
+title: "Project 2"
+subtitle: "STATS 220 Semester One 2023"
+author: "(Alex) Jiacheng Wei"
+date: "2023-03-27"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(tidyverse)
+```
+<div>
+<h1>Introduction</h1>
+<h3>Focus</h3>
+The learning preferences/habits I decided to focus on for my report was the number and types of coding languages people use relative to how long they have been coding, how they felt about some of the bigger languages, and some of the sites they may have used to assist their coding in relation to the previously state factors.
+
+<h3>Considered Guildline</h3>
+<p>
+One of the guidelines I considered was guideline 3 where I allowed
+
+<i>"Which programming concepts do you understand"</i>
+
+and 
+
+<i>"Which of the following websites do you use to assist"</i>
+
+as some people may have somehow program without learning any concepts and some people may not use any website to assist with their coding such as instead using a book.
+
+I also left out a large number of possible websites and all possible programming concepts as it would be impractical to find and list them all.
+</p>
+
+<h3>Un-"tidy"Categorical Data</h3>
+
+<p>
+The check boxes in the google form mean my data is not tidy as people who fill out the form can give no answer, but in this scenario no answer is valid as theoretically it is possible for one to never use a coding website or understand basic concepts and still code.
+</p>
+
+<h3>Link to the Google Form</h3>
+<i>URL</i>
+<p>https://docs.google.com/forms/d/e/1FAIpQLSf7xm0AncYS8XcW8Hn485Z7ViTD_27eUWL_JCVzWHO6xsYZYw/viewform?usp=sf_link
+
+<i>Shortened URL</i>
+https://forms.gle/JJgv12D5ywUgwpS9A
+</p>
+
+
+<h1>Analytics</h1>
+
+<h3>Link to published CSV file</h3>
+<i>URL</i>
+https://docs.google.com/spreadsheets/d/e/2PACX-1vRQzTNG-VqFIOEq2oRWq4m4K0SxDHf0MB9QJWy88WTDK4ZHQiUgZu9NXoZ_AaBCCAB7Xsrg0qd-tVAa/pub?output=csv
+
+
+
+```{r, echo=FALSE, show_col_types = FALSE}
+csv_file <- ("https://docs.google.com/spreadsheets/d/e/2PACX-1vRQzTNG-VqFIOEq2oRWq4m4K0SxDHf0MB9QJWy88WTDK4ZHQiUgZu9NXoZ_AaBCCAB7Xsrg0qd-tVAa/pub?output=csv")
+
+learning_data <- 
+  read_csv(csv_file) %>%
+  rename(expected_years_mastery = 2,
+       expected_number_languages = 3,
+       
+       # Language Learning Difficulty
+       learn_diff_python = 4,
+       learn_diff_java = 5,
+       learn_diff_c = 6,
+       learn_diff_c_plus = 7,
+       learn_diff_r_project = 8,
+       learn_diff_matlab = 9,
+       
+       # Language Usefulness
+       useful_python = 10,
+       useful_java = 11,
+       useful_c = 12,
+       useful_c_plus = 13,
+       useful_r_project = 14,
+       useful_matlab = 15,
+       
+       known_languages = 16,
+       sites_used = 17)
+
+expectation_data <- 
+  tibble(years_mastery = learning_data$expected_years_mastery, 
+         require_num_lang = learning_data$expected_number_languages)
+
+
+expectation_plot <- expectation_data  %>%
+  ggplot() +
+    geom_bar(aes(x = years_mastery), fill = "#B2C248") +
+  labs(title = "How many years do people expect to master a language?",
+       subtitle = "Number of expected years for mastery",
+       caption = "Source: Survey given to family an friends",
+       x = "Expected Number of Years for Mastery",
+       y = "Population")
+
+expectation_plot
+
+required_plot <- expectation_data  %>%
+  ggplot() +
+    geom_bar(aes(x = require_num_lang), fill = "#B2C248") +
+  labs(title = "How many programming langues should you know?",
+       subtitle = "Percieved number of required programming languages",
+       caption = "Source: Survey given to family an friends",
+       x = "Perceived Number of Languages to Know",
+       y = "Population")
+
+required_plot
+#Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+```
+
+<h1>Learning Reflection</h1>
+
+<h3>One important idea</h3>
+
+One important idea I learnt from creating dynamic reporting systems is that thinking up the questions to ask is just as important and requires just as much thought as crunching the numbers do.
+
+There are limitations to R project and other statistics based languages which we must account for, including accounting for the many different possible answers form-takers might have, and from how we word certain questions.
+
+If form-takers misunderstand a question we have asked and anwer incorrectly, then the data will be spoilt.
+
+<h3>Creativity<h3>
+Much like in my first project, I have utilised CSS in my report so that it will look a little more unique and hopefully easy on the eyes and more readable than a standard wall of text.
+
+<h3>Further Into Data Technology</h3>
+
+The human experience of data technology interests me as I am also currently taking a user design course for my computer science degree.
+
+The user experience and the aspects of human interactions beyond the raw technology is something I did not consider as much throughout my course.
+
+In the future, I will keep this in mind so that I may make accurate assessments via surveys and forms.
+
+
+</div>
+
+<style>
+h1 {
+  border-style: double;
+  color: green;
+  text-align: center;
+  background-color: whiteS;
+}
+h2 {
+  border-style: double;
+  color: gold;
+  text-align: center;
+  background-color: navy;
+}
+h3 {
+  color: red;
+}
+div {
+  margin: auto;
+  width: 90%;
+  padding: 10px;
+}
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
